@@ -17,4 +17,10 @@ describe(__filename, function () {
     res.status.should.equal(status('Moved Permanently'))
     res.headers.location.should.equal('https://127.0.0.1/user')
   })
+  it('responds OK on health check', async function () {
+    const res = await request(app.callback())
+      .get('/health')
+      .set({'user-agent': 'ELB-HealthChecker'})
+    res.status.should.equal(status('OK'))
+  })
 })

@@ -9,15 +9,22 @@ function echo (...args) {
   console.log(...args) // eslint-disable-lint no-console
 }
 
-async function loggerMiddleware (ctx, next) {
+function loggerMiddleware (ctx, next) {
   const message = `${ctx.method} ${ctx.url}`
   const startTimestamp = new Date()
-  await next()
+  next()
   echo(`${ctx.status} ${message} - ${Date.now() - startTimestamp}ms`)
 }
 
-async function redirectMiddleware (ctx) {
-  console.log(ctx.get('user-agent'))
+function healthCheckMiddleware (ctx, next) {
+  if (ctx.get('user-agent').startsWith('ELB-HealthChecker')) {
+    ctx.body = 'OK'
+  } else {
+    next()
+  }
+}
+
+function redirectMiddleware (ctx) {
   ctx.status = status('Moved Permanently')
   const hostname = ctx.hostname === 'carnesen.com' ? 'www.carnesen.com' : ctx.hostname
   ctx.redirect(`https://${hostname}${ctx.path}`)
@@ -26,6 +33,7 @@ async function redirectMiddleware (ctx) {
 const app = new Koa()
 
 app.use(loggerMiddleware)
+app.use(healthCheckMiddleware)
 app.use(redirectMiddleware)
 
 function start () {
