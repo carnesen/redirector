@@ -17,6 +17,7 @@ async function loggerMiddleware (ctx, next) {
 }
 
 async function redirectMiddleware (ctx) {
+  console.log(ctx.get('user-agent'))
   ctx.status = status('Moved Permanently')
   const hostname = ctx.hostname === 'carnesen.com' ? 'www.carnesen.com' : ctx.hostname
   ctx.redirect(`https://${hostname}${ctx.path}`)

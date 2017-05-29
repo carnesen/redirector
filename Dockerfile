@@ -1,9 +1,13 @@
-FROM node:7.9
+FROM node:7.10
 
 ADD . /app
 
 WORKDIR /app
 
-RUN yarn install --production
+RUN npm install --production
+
+EXPOSE 8000
+
+USER node
 
 CMD ["./server.js"]
