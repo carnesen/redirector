@@ -26,8 +26,7 @@ function healthCheckMiddleware (ctx, next) {
 
 function redirectMiddleware (ctx) {
   ctx.status = status('Moved Permanently')
-  const hostname = ctx.hostname === 'carnesen.com' ? 'www.carnesen.com' : ctx.hostname
-  ctx.redirect(`https://${hostname}${ctx.path}`)
+  ctx.redirect(`https://${ctx.hostname}${ctx.path}`)
 }
 
 const app = new Koa()
