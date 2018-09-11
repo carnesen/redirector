@@ -8,7 +8,8 @@
     "start": "node server.js",
     "test": "npm run eslint && npm run jest",
     "jest": "jest",
-    "preversion": "npm test"
+    "preversion": "npm test",
+    "postversion": "npm publish"
   },
   "dependencies": {
     "koa": "2.5.3",
