@@ -1,6 +1,6 @@
 {
   "name": "@carnesen/redirector",
-  "version": "0.0.0-0",
+  "version": "0.0.0-1",
   "description": "A web server for redirecting the apex domain to www subdomain",
   "scripts": {
     "eslint": "eslint src",
