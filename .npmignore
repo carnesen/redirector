@@ -1,0 +1,2 @@
+# This prevents certain lint errors related to publishing of this package
+*.test.js
