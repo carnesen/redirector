@@ -2,10 +2,11 @@
   "name": "@carnesen/redirector",
   "version": "0.0.0-1",
   "description": "A web server for redirecting the apex domain to www subdomain",
+  "main": "src/index.js",
   "scripts": {
     "eslint": "eslint src",
     "eslint:fix": "npm run eslint -- --fix",
-    "start": "node server.js",
+    "start": "node src/server.js",
     "test": "npm run eslint && npm run jest",
     "jest": "jest",
     "preversion": "npm test",
@@ -17,7 +18,7 @@
   },
   "devDependencies": {
     "eslint": "5.5.0",
-    "eslint-config-carnesen": "1.1.0-2",
+    "eslint-config-carnesen": "1.1.0",
     "jest": "23.6.0",
     "supertest": "3.3.0"
   },
@@ -26,8 +27,12 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/carnesen/gcp/issues"
+    "url": "https://github.com/carnesen/redirector/issues"
   },
-  "homepage": "https://github.com/carnesen/gcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carnesen/redirector.git"
+  },
+  "homepage": "https://github.com/carnesen/redirector",
   "author": "Chris Arnesen"
 }
