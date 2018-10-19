@@ -1,6 +1,6 @@
 {
   "name": "@carnesen/redirector",
-  "version": "0.0.0-1",
+  "version": "0.0.0",
   "description": "A web server for redirecting the apex domain to www",
   "main": "src/index.js",
   "scripts": {
