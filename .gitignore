@@ -1,8 +1,5 @@
 ### Node ###
 
-# TODO: Remove this
-package-lock.json
-
 # Logs
 logs
 npm-debug.log*
