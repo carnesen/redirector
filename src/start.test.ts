@@ -1,4 +1,4 @@
-const start = require('./start');
+import { start } from './start';
 
 describe(__filename, () => {
   it('starts and stops', async () => {
