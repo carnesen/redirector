@@ -3,9 +3,9 @@ import { echo } from './util';
 
 const PORT = Number(process.env.PORT) || 8000;
 
-export function start() {
+export function start(port = PORT) {
   echo(`Starting server`);
-  return app.listen(PORT, () => {
-    echo(`Listening on port ${PORT}`);
+  return app.listen(port, () => {
+    echo(`Listening on port ${port}`);
   });
 }

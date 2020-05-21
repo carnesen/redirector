@@ -2,6 +2,9 @@
 
 A Node.js http server that redirects a domain apex to the www subdomain
 
+## Usage
+TODO
+
 ## Related
 - [@carnesen/run-and-exit](https://github.com/carnesen/run-and-exit): Run a function, `console.log` the result, and `process.exit`
 - [@carnesen/coded-error](https://github.com/carnesen/coded-error): An enhanced `Error` class with additional properties "code" and "data"

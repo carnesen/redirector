@@ -1,3 +1,7 @@
-// This module has no exports
+import { start } from './start';
 
-exports = {};
+if (require.main === module) {
+  start();
+}
+
+export { start };
