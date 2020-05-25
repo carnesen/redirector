@@ -25,7 +25,7 @@
     "@carnesen/tsconfig": "0.2.0",
     "@types/jest": "25.2.3",
     "eslint": "7.1.0",
-    "eslint-config-carnesen": "2.0.0-1",
+    "eslint-config-carnesen": "2.0.0",
     "jest": "26.0.1",
     "rimraf": "3.0.2",
     "supertest": "4.0.2",
