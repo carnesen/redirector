@@ -1,6 +1,6 @@
 {
   "name": "@carnesen/redirector",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "A web server for redirecting the apex domain to www",
   "main": "src/index.js",
   "bin": {
@@ -12,7 +12,7 @@
     "lint": "eslint src",
     "fix": "eslint src --fix",
     "start": "node lib/index.js",
-    "test": "npm run lint && npm run unit-test",
+    "test": "npm run lint && npm run unit-test && npm run clean-build",
     "unit-test": "jest"
   },
   "dependencies": {
@@ -24,7 +24,7 @@
   "devDependencies": {
     "@carnesen/tsconfig": "0.2.0",
     "@types/jest": "25.2.3",
-    "eslint": "7.0.0",
+    "eslint": "7.1.0",
     "eslint-config-carnesen": "2.0.0-1",
     "jest": "26.0.1",
     "rimraf": "3.0.2",
