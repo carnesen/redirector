@@ -3,27 +3,41 @@
   "version": "0.0.0",
   "description": "A web server for redirecting the apex domain to www",
   "main": "src/index.js",
+  "bin": {
+    "carnesen-redirector": "node lib/index.js"
+  },
   "scripts": {
-    "eslint": "eslint src",
-    "eslint:fix": "npm run eslint -- --fix",
-    "start": "node src/server.js",
-    "test": "npm run eslint && npm run jest",
-    "jest": "jest",
-    "preversion": "npm test",
-    "postversion": "npm publish"
+    "build": "tsc",
+    "clean-build": "rimraf lib/ && npm run build",
+    "lint": "eslint src",
+    "fix": "eslint src --fix",
+    "start": "node lib/index.js",
+    "test": "npm run lint && npm run unit-test && npm run clean-build",
+    "unit-test": "jest"
   },
   "dependencies": {
-    "koa": "2.5.3",
-    "statuses": "1.5.0"
+    "@types/koa": "2.11.3",
+    "@types/statuses": "1.5.0",
+    "koa": "2.12.0",
+    "statuses": "2.0.0"
   },
   "devDependencies": {
-    "eslint": "5.5.0",
-    "eslint-config-carnesen": "1.1.0",
-    "jest": "23.6.0",
-    "supertest": "3.3.0"
+    "@carnesen/tsconfig": "0.2.0",
+    "@types/jest": "25.2.3",
+    "eslint": "7.1.0",
+    "eslint-config-carnesen": "2.0.0-1",
+    "jest": "26.0.1",
+    "rimraf": "3.0.2",
+    "supertest": "4.0.2",
+    "ts-jest": "26.0.0",
+    "typescript": "3.9.3"
   },
+  "files": [
+    "src",
+    "lib"
+  ],
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=10.0.0"
   },
   "license": "MIT",
   "bugs": {

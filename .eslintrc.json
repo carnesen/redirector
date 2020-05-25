@@ -1,5 +1,5 @@
 {
   "extends": [
-    "carnesen"
+    "eslint-config-carnesen/nodejs/.eslintrc.json"
   ]
 }

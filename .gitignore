@@ -1,8 +1,5 @@
 ### Node ###
 
-# TODO: Remove this
-package-lock.json
-
 # Logs
 logs
 npm-debug.log*
@@ -30,6 +27,7 @@ yarn-error.log*
 #Build generated
 dist/
 build/
+lib/
 
 # Serverless generated files
 .serverless/

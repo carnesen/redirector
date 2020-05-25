@@ -1,7 +1,6 @@
-const status = require('statuses');
+import status = require('statuses');
+import { app } from './app';
 const request = require('supertest');
-
-const app = require('./app');
 
 describe(__filename, () => {
   it('redirects to www', async () => {
