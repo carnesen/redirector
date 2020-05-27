@@ -1,11 +1,8 @@
 {
   "name": "@carnesen/redirector",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A web server for redirecting the apex domain to www",
   "main": "src/index.js",
-  "bin": {
-    "carnesen-redirector": "node lib/index.js"
-  },
   "scripts": {
     "build": "rimraf lib/ && tsc",
     "lint": "eslint src",
