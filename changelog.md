@@ -1,13 +1,10 @@
 # `@carnesen/redirector` change log
-
-## [UPCOMING]
-
+## 0.1.0
 ### Breaking
 - Drop support for Node.js 8.
-
 ### Added
-- Convert to TypeScript and include types in exported package
-- Support Node.js 14
+- Convert to TypeScript
+- Support Node.js 12, 14
 
 ## 0.0.0
 Initial release
