@@ -1,26 +1,26 @@
 import Koa = require('koa');
-import status = require('statuses');
+import { OK, MOVED_PERMANENTLY } from 'http-status-codes';
 
-const { echo } = require('./util');
+import { echo } from './util';
 
-const loggerMiddleware: Koa.Middleware = (ctx, next) => {
+const loggerMiddleware: Koa.Middleware = async (ctx, next) => {
   const message = `${ctx.method} ${ctx.url}`;
   const startTimestamp = Date.now();
-  next();
+  await next();
   echo(`${ctx.status} ${message} - ${Date.now() - startTimestamp}ms`);
 };
 
 // Google Cloud App Engine-specific health check response
-const googleCloudAppEngineMiddleware: Koa.Middleware = (ctx, next) => {
+const googleCloudAppEngineMiddleware: Koa.Middleware = async (ctx, next) => {
   if (ctx.path === '/_ah/start') {
-    ctx.status = status('OK');
+    ctx.status = OK;
   } else {
-    next();
+    await next();
   }
 };
 
 const redirectMiddleware: Koa.Middleware = (ctx) => {
-  ctx.status = status('Moved Permanently');
+  ctx.status = MOVED_PERMANENTLY;
   ctx.redirect(`https://www.${ctx.hostname}${ctx.path}`);
 };
 

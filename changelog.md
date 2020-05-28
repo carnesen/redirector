@@ -1,5 +1,8 @@
 # `@carnesen/redirector` change log
-## 0.1.0
+## 0.1.2
+### Fixed
+Fix bug where Koa middleware was not properly calling next().
+## 0.1.1
 ### Breaking
 - Drop support for Node.js 8.
 ### Added
