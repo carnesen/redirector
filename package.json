@@ -1,47 +1,46 @@
 {
-  "name": "@carnesen/redirector",
-  "version": "0.1.2",
-  "description": "A web server for redirecting the apex domain to www",
-  "main": "src/index.js",
-  "scripts": {
-    "build": "rimraf lib/ && tsc",
-    "lint": "eslint src",
-    "fix": "eslint src --fix",
-    "start": "node lib/index.js",
-    "test": "npm run lint && npm run unit-test && npm run build",
-    "unit-test": "jest src"
-  },
-  "dependencies": {
-    "@types/koa": "2.11.3",
-    "http-status-codes": "1.4.0",
-    "koa": "2.12.0"
-  },
-  "devDependencies": {
-    "@carnesen/tsconfig": "0.3.0",
-    "@types/jest": "25.2.3",
-    "eslint": "7.1.0",
-    "eslint-config-carnesen": "3.0.0",
-    "jest": "26.0.1",
-    "rimraf": "3.0.2",
-    "supertest": "4.0.2",
-    "ts-jest": "26.0.0",
-    "typescript": "3.9.3"
-  },
-  "files": [
-    "src",
-    "lib"
-  ],
-  "engines": {
-    "node": ">=10.0.0"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/carnesen/redirector/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/carnesen/redirector.git"
-  },
-  "homepage": "https://github.com/carnesen/redirector",
-  "author": "Chris Arnesen"
+	"name": "@carnesen/redirector",
+	"version": "0.2.0",
+	"description": "A Node.js web server that redirects e.g. example.com to www.example.com",
+	"main": "src/index.js",
+	"scripts": {
+		"build": "rimraf lib/ && tsc",
+		"lint": "eslint src",
+		"fix": "eslint src --fix",
+		"start": "node lib/index.js",
+		"test": "npm run lint && npm run unit-test && npm run build && npm pack",
+		"unit-test": "jest src"
+	},
+	"dependencies": {
+		"http-status-codes": "1.4.0",
+		"koa": "2.13.0"
+	},
+	"devDependencies": {
+		"@carnesen/tsconfig": "0.4.0",
+		"@types/jest": "26.0.9",
+		"@types/koa": "2.11.3",
+		"eslint": "7.6.0",
+		"eslint-config-carnesen": "4.4.0",
+		"jest": "26.2.2",
+		"rimraf": "3.0.2",
+		"supertest": "4.0.2",
+		"ts-jest": "26.1.4",
+		"typescript": "3.9.7"
+	},
+	"files": [
+		"src",
+		"!src/**/__tests__",
+		"lib",
+		"!lib/**/__tests__"
+	],
+	"engines": {
+		"node": ">=12.0.0"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/carnesen/redirector/issues"
+	},
+	"repository": "github:carnesen/redirector.git",
+	"homepage": "https://github.com/carnesen/redirector#readme",
+	"author": "Chris Arnesen"
 }
