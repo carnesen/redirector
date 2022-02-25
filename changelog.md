@@ -2,6 +2,8 @@
 
 ## Upcoming
 
+## carnesen-redirector-0.3.0 (2022-02-25)
+
 - Add support for Node.js 16
 - Drop support for Node.js 12
 

@@ -1,6 +1,6 @@
 {
 	"name": "@carnesen/redirector",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"description": "A Node.js web server that redirects e.g. example.com to www.example.com",
 	"main": "src/index.js",
 	"scripts": {
