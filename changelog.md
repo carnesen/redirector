@@ -1,5 +1,10 @@
 # **@carnesen/redirector** changelog
 
+## Upcoming
+
+- Add support for Node.js 16
+- Drop support for Node.js 12
+
 ## 0.2.0 (2020-08-05)
 
 ### Breaking
