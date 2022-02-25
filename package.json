@@ -12,20 +12,21 @@
 		"unit-test": "jest src"
 	},
 	"dependencies": {
-		"http-status-codes": "1.4.0",
-		"koa": "2.13.0"
+		"http-status-codes": "^2.0.0",
+		"koa": "^2.13.0"
 	},
 	"devDependencies": {
-		"@carnesen/tsconfig": "0.4.0",
-		"@types/jest": "26.0.9",
-		"@types/koa": "2.11.3",
-		"eslint": "7.6.0",
-		"eslint-config-carnesen": "4.4.0",
-		"jest": "26.2.2",
+		"@carnesen/dev": "0.1.1",
+		"@carnesen/tsconfig": "0.4.1",
+		"@types/jest": "27.4.1",
+		"@types/koa": "2.13.4",
+		"eslint": "7.32.0",
+		"eslint-config-carnesen": "7.0.0",
+		"jest": "27.5.1",
 		"rimraf": "3.0.2",
-		"supertest": "4.0.2",
-		"ts-jest": "26.1.4",
-		"typescript": "3.9.7"
+		"supertest": "6.2.2",
+		"ts-jest": "27.1.3",
+		"typescript": "4.5.5"
 	},
 	"files": [
 		"src",
@@ -34,13 +35,13 @@
 		"!lib/**/__tests__"
 	],
 	"engines": {
-		"node": ">=12.0.0"
+		"node": ">=14.0.0"
 	},
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/carnesen/redirector/issues"
 	},
-	"repository": "github:carnesen/redirector.git",
+	"repository": "github:carnesen/redirector",
 	"homepage": "https://github.com/carnesen/redirector#readme",
 	"author": "Chris Arnesen"
 }
